@@ -379,7 +379,7 @@ module.exports.scripttask = function (parent) {
 
                     schedules.forEach(s => {
                         var nextJobTime = obj.determineNextJobTime(s);
-                        var executeImmediatelyTime = nextJobTime - 60;
+                        var executeImmediatelyTime = nextJobTime ;
                         if (nextJobTime === null) {
                             obj.db.removeJobSchedule(s._id);
                         } else {
